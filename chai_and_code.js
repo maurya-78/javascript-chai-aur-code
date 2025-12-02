@@ -435,10 +435,66 @@ const { courseInstructor: instructor } = course;
 //console.log("Result:", result)
 
 function loginUserMessage(username) {
-  return `${username} logged in successfully`;
+  //return `${username} logged in successfully`;
 }
 
 //logicUser = loginUserMessage("Rahul")
 //console.log(logicUser);
 
-console.log(loginUserMessage("Rahul"));
+//console.log(loginUserMessage("Rahul"));
+
+
+function calculateCartPrice(...num1) {      //-> ... is called both rest and spread operator according to his situation 
+                                               //-> when called rest and when called spreat
+ // return num1
+}
+
+//console.log(calculateCartPrice(200, 400, 800, 1000, 1500, 2000));    //[200,400,600,....]-> Rest operator
+
+const user = {
+  username: "Rahul",
+  price: 1999,
+
+}
+
+function handleObject(anyobject){
+ // console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+//handleObject(user)
+
+handleObject({
+  username:"Rahul",
+  price:399,
+})
+
+
+const myNewArray = [100,200,300,400,500]
+
+function returnSecondValue(getArray){
+  //return getArray[4]
+}
+
+//console.log(returnSecondValue(myNewArray));
+
+//console.log(returnSecondValue([400,500,600,700,800,900,1000]));
+
+
+
+
+//------------ Global and Local Scope in JavaScript --------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
