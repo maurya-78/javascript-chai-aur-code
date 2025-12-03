@@ -586,12 +586,44 @@ user.username = "Rahul Maurya"
 // chai()
 
 
-// const chai = () => {
-//    let username = "Rahul"
+ const chai = () => {
+    let username = "Rahul"
+   // console.log(this);
+ }
+
+ //chai()
+
+//  Arrow Function-> syntax= () => {}
+
+// const addTwo_ =(num1, num2) => {
+//        return num1+num2;
+  
+// }
+// console.log(addTwo_(5,3))
+
+//const addTwo_ =(num1, num2) =>   num1+num2;
+ 
+//const addTwo_ =(num1, num2) =>   (num1+num2);
+
+//const addTwo_ =(num1, num2) => {username: "Rahul" }       //-> did not get the output
+
+const addTwo_ =(num1, num2) => ({username: "Rahul" })     //   it's provide a output
+
+//console.log(addTwo_(5,3))
+
+// if we use carly brases then we write the return(*) statement
+// if we use parenthesis then we not write the return statement
 
 
 
 
+//  Immediately Invoked Function Expressions (IIFE)
 
+(function chai(){
+  // named IIFE
+   console.log(`DB CONNECTED`);
+})();
 
-
+( () => {
+  console.log(`DB CONNECTED ${name}`);
+})("Rahul")
