@@ -451,7 +451,7 @@ function calculateCartPrice(...num1) {      //-> ... is called both rest and spr
 
 //console.log(calculateCartPrice(200, 400, 800, 1000, 1500, 2000));    //[200,400,600,....]-> Rest operator
 
-const user = {
+const user_cart = {
   username: "Rahul",
   price: 1999,
 
@@ -485,12 +485,109 @@ function returnSecondValue(getArray){
 //------------ Global and Local Scope in JavaScript --------------
 
 
+// let a=10;
+// const b=20;
+// var c=30;
+var c = 600;
+if(true){
+  let a=40;
+  const b=50;   // whose variable write in curly brases they are called the scope variable 
+  var c=60;
+
+}
+
+//console.log(a);
+//console.log(b);
+//console.log(c);
 
 
+let num1 = 20;
+
+if(true){
+  let num1 = 50;
+  const num3 = 60;
+  //console.log("INNER:",num1)
+}
+
+//console.log("OUTER:",num1)
+
+// if we run any commond in console and node (terminal) method 
+// then both are different output for local and globle variables.
 
 
+//   ---------- Nested Scope -----------
 
 
+function one(){
+  const username = "Rahul";
+  function two(){
+    const website = "Youtube"
+    //console.log(username);
+  }
+     //console.log(website);
+   two()
+}
+
+//one()
+
+if(true){
+  const username = "Rahul"
+  if(username === "Rahul"){
+    const website = " Youtube"
+   // console.log(username + website);
+  }
+  // console.log(website);
+}
+//console.log(username);
+
+
+// ++++++++++++++++ Important Concepts +++++++++++
+
+function addone(num){      // function
+ // return num+1;
+}
+
+//addone(5)
+
+const addTwo = function(num){     // it is also a function
+  //return num+2;
+
+}
+
+//addTwo(5)
+
+
+// ---------- Arrow Function --------------
+
+const user = {
+    username:"Rahul",
+    price:999,
+
+    welcomeMessage: function(){
+       // console.log(`${this.username}, welcome to website`);
+       // console.log(this);
+    
+    }
+
+}
+ 
+//user.welcomeMessage()
+user.username = "Rahul Maurya"
+//user.welcomeMessage()
+
+//console.log(this);
+
+// function chai(){
+//   let username = "Rahul"
+//     console.log(this);
+
+// }
+
+// chai()
+
+
+// const chai = () => {
+//    let username = "Rahul"
 
 
 
