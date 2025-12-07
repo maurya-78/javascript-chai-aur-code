@@ -621,9 +621,235 @@ const addTwo_ =(num1, num2) => ({username: "Rahul" })     //   it's provide a ou
 
 (function chai(){
   // named IIFE
-   console.log(`DB CONNECTED`);
+  // console.log(`DB CONNECTED`);
 })();
 
 ( () => {
-  console.log(`DB CONNECTED ${name}`);
-})("Rahul")
+  //console.log(`DB CONNECTED ${name}`);
+})("Rahul") 
+
+
+// ------------JavaScript Execution Context -----------------
+
+//   1. {} -> Globaal Execution Context -> Memory Creation Phase/ Creation Phase
+//   2.    -> Function Execution Context
+                                        // -> Execution Phase
+
+//     ->Globle Execution -> this
+
+
+
+
+// -------> Control flow in javaScript <------------
+
+
+const temperture = 41;
+
+if(temperture < 50){
+    //console.log("temperture is less than 50")
+}else{
+   //console.log("temperture is gratter than 50")
+}
+
+const score =200;
+
+if(score>100){
+  const power = "fly"
+  //console.log(`User power: ${power}`)
+}
+//console.log(`User power: ${power}`)   // it is not executed because power is not define in outside -> 
+                                      // it is define in inside the curly brasis 
+
+
+// const balance =1000
+
+// if(balance > 500) console.log("test") ;    //it is emplysit scope
+
+const balance = 1000;
+
+// if(balance < 500){
+//   console.log("less than 500")
+// }else if(balance < 750){
+//   console.log("less than 750")
+// }else if(balance < 900){
+//   console.log("less than 900")
+// }else{
+//   console.log("less than 1200")
+// }
+
+
+const userLoggedIn = true;
+const debitCard = true; 
+const loggedInFromGoogle = false;
+const loggedInFromEmail = true;
+
+if( userLoggedIn && debitCard && 2==2){
+// console.log("Allow to buy course");
+}
+
+if(loggedInFromGoogle || loggedInFromEmail){
+ // console.log("User logged in from google or email");
+
+}
+
+// --------> Switch statement <---------
+
+// const month = 3;
+
+// switch(month){
+//   case 1:
+//     console.log("January");
+//     break;
+//   case 2:
+//     console.log("February");
+//     break;
+//   case 3:
+//     console.log("March");
+//     break;
+//   case 4:
+//     console.log("April");
+//     break;
+//   case 5:
+//     console.log("May");
+//     break;
+//   case 6:
+//     console.log("June");
+//     break;
+//   case 7:
+//     console.log("July");
+//     break;
+//   case 8:
+//     console.log("August");
+//     break;
+//   case 9:
+//     console.log("September");
+//     break;
+//   case 10:
+//     console.log("October");
+//     break;
+//   case 11:
+//     console.log("November");
+//     break;
+//   case 12:
+//     console.log("December");
+//     break;
+//   default:
+//     console.log("Invalid");
+//     break;
+// }
+
+// ----------> Truthy Values Falsy Values <---------
+
+const userEmail = "r@rahul.com"
+
+if(userEmail){
+    //console.log("Got user email");
+}else{
+  //console.log("Did not get user email");
+
+}
+
+// falsy values    -> false ,0,-0,BigInt 0n,"",null,undefined,NaN
+
+// Truthy values    -> "0","false"," ",[],{}, function(){}
+
+// if(userEmail.length === 0){
+//   console.log("Array is empty");
+// }
+
+const emptyObj = {}
+
+// if(Object.keys(emptyObj).length === 0)
+// {
+//   console.log("Object is empty");
+
+// }  
+
+
+//  Nullish Coalescing Operator (??): null undefined
+
+let val1;
+// val1 = 5 ?? 10;
+ //val1 = 0 ?? 10;
+ //val1 = null ?? 10;
+ //val1 = undefined ?? 10;
+ //val1 = null ?? 10 ?? 20
+//console.log(val1);
+
+// -------> Terniary Operator <--------
+
+//condition ? true : false;
+
+// const iceTeaPrice = 100;
+
+//      iceTeaPrice >= 80 ? console.log("less than 80") : console.log
+//      ("greater than 80");
+
+
+//  -----------> For loop with break and continue in JavaScript <-------------
+
+// for (let index = 0; index < 10; index++){
+//      const element = index;
+//      if(element == 5){
+//       //console.log("5 is best number");
+//      }
+//     // console.log(element);
+// }
+
+// for(let i=1; i<=10; i++){
+//   console.log(`Outer loop: ${i}`)
+//   for(let j=1; j<=10; j++){
+//       //console.log(`Inner loop: ${j} and inner loop ${i}`)
+//       console.log(i + "*" + j + "=" + i*j)
+//   }
+// }
+
+
+let myNewArray1 = ["Rahul", "Maurya","Jaunpur","Kanpur"]
+
+for(let index = 0; index < myNewArray1.length; index++){
+  const element = myNewArray1[index];
+ // console.log(myNewArray1.length);
+ // console.log(element);
+
+}
+
+// ---------> break and continue <-----------
+
+// for(let i=1; i<=10; i++){
+//    if(i == 5){
+//     console.log(`Detected 5`);
+//     continue;
+//     //break;
+//    }
+//   console.log(`Value of element is ${i}`);
+// }
+
+
+
+//  ---------------->While loop and DoWhile loop <------------------
+
+let index = 0;
+while( index <= 10){
+  //console.log(`Value of index is ${index}`);
+  index = index + 2;
+  //index++;
+
+}
+
+let Array2 = ["Rahul","Maurya","Jaunpur","Kanpur"]
+
+let arr=0;
+while(arr < Array2.length){
+  //console.log(Array2[arr]);
+  arr++;
+
+}
+
+//  dowhile ->
+
+let marks= 11;
+do{
+  // console.log(`Marks is ${marks}`);
+   marks++;
+}while(marks <= 10);
