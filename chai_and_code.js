@@ -853,3 +853,100 @@ do{
   // console.log(`Marks is ${marks}`);
    marks++;
 }while(marks <= 10);
+
+
+// -------> High Order Array Loops <---------
+
+
+// for of
+
+const arr4 = [1, 2, 3, 4, 5]
+
+for (const num of arr4) {
+ // console.log(num);
+}
+
+const greetigs = "Good Morning"
+
+for (const greet of greetigs) {
+ // console.log(`Each character is ${greet}`);
+ 
+}
+
+
+//       Maps
+
+const map1 = new Map();
+map1.set("IN", "India");
+map1.set("US", "America")
+map1.set("UK","United Kingdom")
+map1.set("IN", "India")
+
+//console.log(map1);
+
+// console.log(map1.get("IN"));
+// console.log(map1.get("UK"));
+// console.log(map1.get("US"));
+
+for (const iterator of map1){
+ //  console.log(iterator);
+
+}
+
+for (const [key, value] of map1){
+  //console.log(key, ":-" , value);
+
+}
+
+
+// for(const [key , value] of myObject){
+//   console.log(key, ":-", value);  
+// }
+
+// const myObject = {
+//   name: "Rahul",
+//   age: 20 ,
+// }
+
+
+//    for in
+
+const myObject = {
+  js:"javascript",
+  cpp:"C++",
+  rb:"Ruby",
+  swift:"Flutter",
+}
+
+for (const key in myObject) {
+  //console.log(`${key} shortcut is for ${myObject[key]}`);
+
+}
+
+const programming = ["js","cpp","rb","swift","python"]
+
+for (const key in programming) {
+      //console.log(`${key} is the value of ${programming[key]}`)
+}
+
+//   Note -> we can't apply for in loop in the map -> can't provide output
+        //-> and can't apply for of in any object  -> Error
+
+//  For each loop
+
+const coding = ["js","cpp","rb","swift","python"]
+
+coding.forEach(function(val){
+  //console.log(val);
+})
+
+coding.forEach( (val)=> {
+ // console.log(val);
+})
+
+function printMe(item){
+  console.log(item)
+}
+
+coding.forEach(printMe)
+
